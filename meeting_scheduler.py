@@ -7,11 +7,11 @@ import random
 # Mark who is present, then a random order for presenting is shown.
 #
 # Author: David
-# Date: 2020-03-19
+# Date: 2020-03-23
 #
 
 # Add people as required.
-PARTICIPANTS = ['Arthur', 'Gustavo', 'Sara', 'Felipe', 'Peide', 'Nirmal', 'David']
+PARTICIPANTS = ['Claudia', 'Arthur', 'Gustavo', 'Sara', 'Felipe', 'Peide', 'Nirmal', 'David']
 
 def get_active_participants():
     """
