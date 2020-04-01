@@ -11,7 +11,7 @@ import random
 #
 
 # Add people as required.
-PARTICIPANTS = ['Claudia', 'Arthur', 'Gustavo', 'Sara', 'Felipe', 'Peide', 'Nirmal', 'David']
+PARTICIPANTS = ['Claudia', 'Arthur', 'Gustavo', 'Sara', 'Manuel', 'Felipe', 'Peide', 'Nirmal', 'David']
 
 def get_active_participants():
     """
@@ -66,11 +66,12 @@ def main():
     
     print(f"Complete. You have selected {len(active_participants)} participants.")
     print("The order for the meeting is:")
+    print()
 
     random.shuffle(active_participants)
 
     for participant_id in active_participants:
-        print(f"\t{PARTICIPANTS[participant_id]}")
+        print(f"{PARTICIPANTS[participant_id]}")
     
     print(f"{os.linesep}Have fun!")
     
