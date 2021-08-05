@@ -45,33 +45,18 @@ def get_active_participants():
 
 def main():
     """
-    Where the magic happens. Solicits a list of active participants, and randomises the list.
+    Where the magic happens. Randomises the list.
     Prints the randomised list (which is the presenting order), and exits.
     """
-    print(f"First, who is present?{os.linesep}Type the number next to individuals who are present, then push enter when finished.{os.linesep}")
-
-    i = 1
-
-    for participant in PARTICIPANTS:
-        print(f"\t{i}: {participant}")
-        i = i + 1
-    
-    print(f"{os.linesep}")
-    active_participants = get_active_participants()
-    print(f"{os.linesep}")
-    
-    if len(active_participants) == 0:
-        print("E: You did not select any participants. Exiting...")
-        return 1
-    
-    print(f"Complete. You have selected {len(active_participants)} participants.")
+    print(f"There are {len(PARTICIPANTS)} participants.")
     print("The order for the meeting is:")
     print()
 
-    random.shuffle(active_participants)
+    participants = PARTICIPANTS
+    random.shuffle(participants)
 
-    for participant_id in active_participants:
-        print(f"{PARTICIPANTS[participant_id]}")
+    for participant in participants:
+        print(f"{participant}")
     
     print(f"{os.linesep}Have fun!")
     
